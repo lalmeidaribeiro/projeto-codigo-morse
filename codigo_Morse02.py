@@ -1,6 +1,6 @@
-
 import os
-#.-  .- ..- .-.. .-  -.. .-  -.-. .- .-. --- .-.. .. -. .-  ..  -- .- .-. .- ...- .. .-.. .... --- ... .-
+from datetime import datetime
+#'-.-.', '.-', '.-.', '---', '.-..', '..', '-.', '.-'
 
 def exibir_nome_do_programa():
     print('''
@@ -25,7 +25,7 @@ def decodifica_codigo_morse(): #Função para decodificar o código morse
     mensagem = input('Digite a mensagem em código Morse: ')
     codigo_morse = carrega_codigo_morse()
 
-    #print(codigo_morse) #sertificando que careguei o dicionario para dentro da função 
+    #print(codigo_morse) #ertificando que careguei o dicionario para dentro da função 
 
     palavras = mensagem.split('  ') #Separar palavras - Dois espaços
     mensagem_decodificada = []
@@ -34,11 +34,14 @@ def decodifica_codigo_morse(): #Função para decodificar o código morse
         letras = palavra.split(' ')  # Separar letras - Um espaço 
         palavra_decodificada = ''.join([codigo_morse.get(letra, '') for letra in letras])
         mensagem_decodificada.append(palavra_decodificada)
-#Melhorar essa linha de código 
+
     #print(mensagem_decodificada) #Retorna a lista 
     return ' '.join(mensagem_decodificada)
-
-
+    
+def salva_mensagem(mensagem_decodificada, file_path): #Função que salva a menage em um arquivo txt    
+    with open(file_path, 'a') as file:
+        file.write(f"Mensagem decodificada: {mensagem_decodificada} | Data e hora: {datetime.now()}:\n")
+        
 def escolha_opcao():
     opcao_escolhida = int(input('Escolha uma opção: '))
 
@@ -47,6 +50,7 @@ def escolha_opcao():
 
     elif opcao_escolhida == 2:
         decodifica_codigo_morse()
+        print('Um arquivo foi criado com a mensagem decodificada!')
 
     elif opcao_escolhida == 3:
         print('Finalizando o programa...')
