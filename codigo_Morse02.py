@@ -20,7 +20,7 @@ def exibir_opcoes_menu():
 def carrega_codigo_morse(): #Função para carregar o dicionário Morse
     dicionario_morse = {".-": "A", "-...": "B", "-.-.": "C", "-..": "D", ".": "E", "..-.": "F","--.": "G", "....": "H", "..": "I", ".---": "J", "-.-": "K", ".-..": "L","--": "M", "-.": "N", "---": "O", ".--.": "P", "--.-": "Q", ".-.": "R","...": "S", "-": "T", "..-": "U", "...-": "V", ".--": "W", "-..-": "X","-.--": "Y", "--..": "Z", "-----": 0, ".----": 1, "..---": 2, "...--": 3,"....-": 4, ".....": 5, "-....": 6, "--...": 7, "---..": 8, "----.": 9}
     return dicionario_morse
-
+ 
 def decodifica_codigo_morse(): #Função para decodificar o código morse
     mensagem = input('Digite a mensagem em código Morse: ')
     codigo_morse = carrega_codigo_morse()
@@ -51,10 +51,10 @@ def escolha_opcao():
     elif opcao_escolhida == 2:
         decodifica_codigo_morse()
         print('Um arquivo foi criado com a mensagem decodificada!')
-
+        #TETSE
     elif opcao_escolhida == 3:
         print('Finalizando o programa...')
-
+        
     else:
         print('Sinto muito, essa não é uma opcao válida!')
 
