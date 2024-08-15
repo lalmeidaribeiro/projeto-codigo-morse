@@ -2,7 +2,7 @@
 
 <p>Este repositório contém um projeto voltado para interceptar e decifrar mensagens secretas escritas em código Morse. O projeto recebe um dicionário de dados e tem como objetivo decodificar mensagens "interceptadas", por fim salva as mensagens em texto claro, junto com a data e hora da decodificação.</p>
 
-![image](https://github.com/user-attachments/assets/6908b7f8-a290-4856-bbcc-9fdecfd9bc29)
+![Morse Larissa](https://github.com/user-attachments/assets/ee14102f-665f-4a54-b3cb-1a65072bb315)
 
 ## Funcionalidades
 - Interceptar mensagens em Código Morse: Recebe e processe mensagens escritas em código Morse.
