@@ -37,7 +37,23 @@ def decodifica_codigo_morse(): #Função para decodificar o código morse
 
     #print(mensagem_decodificada) #Retorna a lista 
     return ' '.join(mensagem_decodificada)
-    
+
+def criar_mensagem_morse(): #Função que cria o código morse
+    cria_mensagem = input("Digite a frase para converter em código Morse: ")
+   
+    codigo_morse = carrega_codigo_morse()
+  
+    morse_result = []
+  
+    for char in cria_mensagem:
+        if char.upper() in codigo_morse.values():
+            morse_result.append(list(codigo_morse.keys())[list(codigo_morse.values()).index(char.upper())])
+            morse_result.append(" ")  # Adiciona um espaço entre as letras
+        elif char == " ":
+            morse_result.append("  ")  # Adiciona dois espaços entre as palavras
+    morse_final = "".join(morse_result).strip()
+    print("Código Morse:", morse_final)
+
 def salva_mensagem(mensagem_decodificada, file_path): #Função que salva a menage em um arquivo txt    
     with open(file_path, 'a') as file:
         file.write(f"Mensagem decodificada: {mensagem_decodificada} | Data e hora: {datetime.now()}:\n")
@@ -46,15 +62,12 @@ def escolha_opcao():
     opcao_escolhida = int(input('Escolha uma opção: '))
 
     if opcao_escolhida == 1:
-        print('Escolheu a opção 1')
-
+        criar_mensagem_morse()
     elif opcao_escolhida == 2:
         decodifica_codigo_morse()
         print('Um arquivo foi criado com a mensagem decodificada!')
-        #TETSE
     elif opcao_escolhida == 3:
         print('Finalizando o programa...')
-        
     else:
         print('Sinto muito, essa não é uma opcao válida!')
 

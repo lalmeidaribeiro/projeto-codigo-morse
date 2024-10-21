@@ -6,13 +6,13 @@
 
 ## Funcionalidades
 - Interceptar mensagens em Código Morse: Recebe e processe mensagens escritas em código Morse.
-- Decodificação Precisa: As letras são separadas por um espaço e as palavras por dois espaços.  
+- Decodificação precisa: As letras são separadas por um espaço e as palavras por dois espaços.  
 - Salvar mensagens decodificadas: As mensagens decodificadas são salvas em um arquivo de texto, com hora e data.
 
 ## Estrutura do Repositório
 - "codigo_morse02.py": Versão 2.0 do código. Este arquivo contém um menu com três opções, permitindo ao usuário criar uma frase em Código Morse ou decodificar uma frase/palavra 
 - "criando_mensagem_morse.py": Script que permite criar frases ou palavras usando o alfabeto e transcrevê-las em código Morse.
-- "decifrando_codigo_morse.py": Exercício solicitado pela professora Carolina, focado na decodificação de código Morse.
+- "decifrando_codigo_morse.py": Arquivo com o script focado na decodificação de código Morse.
 - "decoded_messages.txt": Arquivo de saída onde são armazenadas as mensagens decodificadas, juntamente com a data e hora da decodificação.
 
 ## Versão 2.0 do projeto 
@@ -20,4 +20,4 @@
 
 ![image](https://github.com/user-attachments/assets/54836570-0c55-43fd-b359-8618e6604927)
 
-<p>🚧 Em construção 🚧</p> 
+
